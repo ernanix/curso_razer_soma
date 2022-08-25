@@ -5,16 +5,25 @@ import { AppComponent } from './app.component';
 import { SomaModule,SomaComponent } from './soma';
 import { MultModule,MultComponent } from './mult';
 import { SubModule,SubComponent } from './sub';
+import { DivModule,DivComponent } from './div';
+
+import {MatMenuModule} from '@angular/material/menu';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import {
    RouterModule,
    Routes
 } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: 'mult', component: MultComponent},
   { path: 'soma', component: SomaComponent},
-  { path: 'sub', component: SubComponent}
+  { path: 'sub', component: SubComponent},
+  { path: 'div', component: DivComponent},
 ]
 
 @NgModule({
@@ -26,8 +35,14 @@ const routes: Routes = [
     SomaModule,
     MultModule,
     SubModule,
-    RouterModule.forRoot(routes)
-  ],
+    DivModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatMenuModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+ ],
   providers: [],
   bootstrap: [AppComponent]
 })
