@@ -1,9 +1,9 @@
-<button mat-button [matMenuTriggerFor]="aboveMenu">Calculadora</button>
+<button at-stroked-button color="accent" mat-button [matMenuTriggerFor]="aboveMenu">Calculadora</button>
 <mat-menu #aboveMenu="matMenu" yPosition="above">
-  <a [routerLink]="['/soma']">Somar</a>
-  <a [routerLink]="['/sub']">Subtrair</a>
-  <a [routerLink]="['/mult']">Multiplicar</a>
-  <a [routerLink]="['/div']">Dividir</a>
+  <a mat-button [routerLink]="['/soma']">Somar</a>
+  <a mat-button [routerLink]="['/sub']">Subtrair</a>
+  <a mat-button [routerLink]="['/mult']">Multiplicar</a>
+  <a mat-button [routerLink]="['/div']">Dividir</a>
 </mat-menu>
 
 
